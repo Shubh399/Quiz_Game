@@ -64,7 +64,7 @@ body {
     margin: 1rem;
     padding: 1rem;
     width: 100%;
-    height: 60vh;
+    height: 15vh;
 }
 
 .quiz-header {
@@ -73,6 +73,8 @@ body {
     flex-direction: column;
     margin: 0.5rem;
     padding: 0.5rem;
+    font-weight: 1000;
+    font-size: 1.5rem;
     justify-content: space-between;
     align-items: center;
 
@@ -92,6 +94,30 @@ body {
 
 .answers-container {
     display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    gap: 2rem;
+    height: 50vh;
+    justify-content: center;
+    
+}
+.answers-container button{
+    width: 33vw;
+    height: 25vh;
+    border-radius: 1rem;
+    cursor: pointer;
+    align-items: flex-start;
+    background: transparent;
+    justify-content: center;
+    text-align:left;
+    padding-left: 1rem;
+}
+.answers-container button:hover{
+    background-color: #e86a33;
+
 }
 
 .result-screen {
