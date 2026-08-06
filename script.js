@@ -132,3 +132,16 @@ option.forEach((btn, index) => {
     }, 500);
   });
 });
+
+let restart = document.getElementById("restart");
+restart.addEventListener("click",()=>{
+  score = 0;
+  currentQuestion = 0;
+  start_screen.style.display = "flex";
+  quiz_screen.style.display = "none";
+  quiz_header.style.display = "none";
+  quiz_info.style.display = "none";
+  answers_container.style.display = "none";
+  result_screen.style.display='none';
+  showQuestion();
+})
