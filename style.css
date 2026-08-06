@@ -80,8 +80,8 @@ body {
 
 }
 
-#score span {
-    padding-right: 2rem;
+#score_board {
+    padding-right: 2.5rem;
 }
 
 .quiz-info {
@@ -106,7 +106,7 @@ body {
 }
 
 .answers-container button {
-    width: 33vw;
+    width: 28vw;
     height: 25vh;
     border-radius: 1rem;
     cursor: pointer;
@@ -114,6 +114,7 @@ body {
     background: transparent;
     justify-content: center;
     text-align: left;
+    margin-right: 1rem;
     padding-left: 1rem;
 }
 
@@ -134,4 +135,44 @@ body {
     align-items: center;
     justify-content: center;
 
+}
+
+.result-screen h1 {
+    color: #e86a33;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.result-info{
+    width: 95%;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #e86a33;
+    border-radius: 1rem;
+}
+.restart{
+    margin: 1rem;
+    padding: 1rem;
+    width: 11vw;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    color: #f5efe6;
+}
+#restart-btn{
+    width: 10vw;
+    cursor: pointer;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    height: 5vh;
+    border-radius: 1rem;
+    background-color: #e86a33;
 }

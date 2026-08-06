@@ -11,6 +11,10 @@ let Score = document.getElementById("Score");
 let result_screen = document.getElementById("result-screen");
 result_info = document.getElementById("result-info");
 current_question = document.getElementById("current-question");
+let final_score = document.getElementById("final-score");
+let result_message = document.getElementById("result-message");
+
+
 
 
 start_btn.addEventListener("click", () => {
@@ -109,6 +113,21 @@ option.forEach((btn, index) => {
         result_screen.style.display = "flex";
         quiz_screen.style.display = "none";
         quiz_info.style.display = "none";
+        final_score.innerHTML = score;
+        if (score < 1) {
+          result_message.innerText = "You need more practics";
+          console.log(result_message);
+          
+        } else if (score < 2) {
+          result_message.innerHTML = "You are better than 30%";
+        } else if (score < 3) {
+          result_message.innerHTML = "You are better than 50%";
+        } else if (score < 4) {
+          result_message.innerHTML = "You are better than 70%";
+        }else{
+          result_message.innerHTML = "You are better than 90%";
+        }
+        
       }
     }, 500);
   });
