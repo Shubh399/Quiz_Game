@@ -14,9 +14,6 @@ current_question = document.getElementById("current-question");
 let final_score = document.getElementById("final-score");
 let result_message = document.getElementById("result-message");
 
-
-
-
 start_btn.addEventListener("click", () => {
   start_screen.style.display = "none";
   quiz_screen.style.display = "flex";
@@ -78,32 +75,32 @@ function showQuestion() {
   quiz_header.innerHTML = quizQuestions[currentQuestion].question;
   option.forEach((btn, index) => {
     btn.innerHTML = quizQuestions[currentQuestion].answers[index].text;
-    current_question.innerText=currentQuestion+1 +" "
+    current_question.innerText = currentQuestion + 1 + " ";
     btn.style.backgroundColor = "";
     btn.disabled = false;
   });
 }
 
 //logic every time index reach max value of arrary and everytime it's back to normal for every qestion
-let score =0;
+let score = 0;
 option.forEach((btn, index) => {
   btn.addEventListener("click", () => {
-    //logic : first access first of  quiz question then access options of first qeustion after ckeck if correct return true or wrong return false 
+    //logic : first access first of  quiz question then access options of first qeustion after ckeck if correct return true or wrong return false
 
     if (quizQuestions[currentQuestion].answers[index].correct) {
       btn.style.backgroundColor = "green";
-      score++
-      Score.innerHTML=score
+      score++;
+      Score.innerHTML = score;
     } else {
       btn.style.backgroundColor = "red";
     }
-    
+
     option.forEach((button) => {
       button.disabled = true;
     });
-    
+
     setTimeout(() => {
-      //logic : current_question  starting value = 0 then add one to previous value of current_question and it's repeat in every question also take half second to change question 
+      //logic : current_question  starting value = 0 then add one to previous value of current_question and it's repeat in every question also take half second to change question
       currentQuestion++;
       if (currentQuestion < quizQuestions.length) {
         showQuestion();
@@ -117,24 +114,22 @@ option.forEach((btn, index) => {
         if (score < 1) {
           result_message.innerText = "You need more practics";
           console.log(result_message);
-          
         } else if (score < 2) {
           result_message.innerHTML = "You are better than 30%";
         } else if (score < 3) {
           result_message.innerHTML = "You are better than 50%";
         } else if (score < 4) {
           result_message.innerHTML = "You are better than 70%";
-        }else{
+        } else {
           result_message.innerHTML = "You are better than 90%";
         }
-        
       }
     }, 500);
   });
 });
 
 let restart = document.getElementById("restart");
-restart.addEventListener("click",()=>{
+restart.addEventListener("click", () => {
   score = 0;
   currentQuestion = 0;
   start_screen.style.display = "flex";
@@ -142,6 +137,6 @@ restart.addEventListener("click",()=>{
   quiz_header.style.display = "none";
   quiz_info.style.display = "none";
   answers_container.style.display = "none";
-  result_screen.style.display='none';
+  result_screen.style.display = "none";
   showQuestion();
-})
+});

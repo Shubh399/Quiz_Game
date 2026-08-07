@@ -147,7 +147,7 @@ body {
     padding: 1rem;
 }
 
-.result-info{
+.result-info {
     width: 95%;
     text-align: center;
     margin: 1rem;
@@ -158,7 +158,8 @@ body {
     background-color: #e86a33;
     border-radius: 1rem;
 }
-.restart{
+
+.restart {
     margin: 1rem;
     padding: 1rem;
     width: 11vw;
@@ -167,12 +168,13 @@ body {
     justify-content: center;
     color: #f5efe6;
 }
-#restart-btn{
+
+#restart-btn {
     width: 10vw;
     cursor: pointer;
     margin: 0.25rem;
     padding: 0.25rem;
     height: 5vh;
     border-radius: 1rem;
-    background-color:#f5efe6;
+    background-color: #f5efe6;
 }
