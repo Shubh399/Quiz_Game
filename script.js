@@ -9,7 +9,7 @@ const option = document.querySelectorAll(".answer");
 let current_question = document.getElementById("current-question");
 let Score = document.getElementById("Score");
 let result_screen = document.getElementById("result-screen");
-result_info = document.getElementById("result-info");
+let result_info = document.getElementById("result-info");
 current_question = document.getElementById("current-question");
 let final_score = document.getElementById("final-score");
 let result_message = document.getElementById("result-message");
@@ -130,6 +130,7 @@ option.forEach((btn, index) => {
 
 let restart = document.getElementById("restart");
 restart.addEventListener("click", () => {
+  Score.innerHTML = 0;
   score = 0;
   currentQuestion = 0;
   start_screen.style.display = "flex";
